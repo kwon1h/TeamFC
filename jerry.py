@@ -193,7 +193,7 @@ with Sweep('/dev/ttyUSB0') as sweep:
                 indices = np.where(lidar_cluster_labels == i)
                 X_cluster = np.array(X)[indices]; Y_cluster = np.array(Y)[indices]
                 X_center = np.median(X_cluster); Y_center = np.median(Y_cluster)
-                plt.scatter(X_center, Y_center, c = 'black', marker='d', s=250)
+                plt.scatter(X_center, Y_center, c = 'blue', marker='d', s=250)
                 plt.scatter(X_cluster, Y_cluster, c = colors[i%13], s = 25)
 
             plt.pause(0.1)
